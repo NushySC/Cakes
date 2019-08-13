@@ -1,0 +1,139 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.navbar {
+	flex: 0 0 auto;
+	background-color: $beige;
+
+	.links {
+		list-style: none;
+		padding: 0;
+
+		li {
+			a {
+				font-family: $title;
+				display: block;
+				color: $pink;
+				background: transparent;
+				text-decoration: none;
+				padding: 0.2em .5em;
+				font-size: 1.2em;
+				transition: color 1s ease, background 1s ease, padding 1s ease;
+
+				&:hover {
+					color: $beige;
+					padding-left: 3em;
+					background: $pink;
+				}
+			}
+		}
+	}
+}
+
+.banner {
+	flex: 1 0 auto;
+	background: $beige;
+}
+
+.nav--top {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 1em 1em 1em;
+
+	h3 {
+		font-family: $title;
+
+		font-size: 2em;
+		padding: 0.2em;
+		color: $pink;
+		border: 0.1em solid $pink;
+		transition: color 2s ease, background 2s ease;
+
+		&:hover {
+			//background: $beige;
+			color: $grey;
+		}
+	}
+}
+
+.toggle {
+	padding: 0.3em;
+	border: 0.1em solid $beige;
+	border-radius: 0.4em;
+	cursor: pointer;
+	align-self: center;
+	&--bar {
+		height: 0.2em;
+		width: 1.5em;
+		border-radius: 0.2em;
+		background-color: $beige;
+		margin: 0.3em;
+		transition: transform 1s ease;
+	}
+}
+
+.turn {
+	.bar--1 {
+		transform: rotate(-45deg) translate(-0.1em, 0.2em);
+	}
+
+	.bar--2 {
+		display: none;
+	}
+
+	.bar--3 {
+		transform: rotate(45deg) translate(-0.2em, -0.2em);
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.navbar {
+		display: flex;
+		align-items: baseline;
+		flex-wrap: wrap;
+		padding: 0 .5em;
+		font-size: 0.8em;
+
+		ul {
+			flex: 1 auto;
+			display: flex !important;
+			flex-wrap: wrap;
+
+			li {
+				flex: 1 0 6em;
+
+				.link--icon {
+					color: tomato;
+					background: yellow;
+
+					&:hover {
+						background: green;
+					}
+				}
+			}
+
+			.icon {
+				flex: 0 0 3em;
+            }
+            
+            a {
+                text-align: center;
+
+                &:hover{
+					padding: 1em 0 1em 0;
+
+                }
+            }
+        }
+        .nav--top {
+            padding: .6em;
+        }
+	}
+
+	.toggle {
+		display: none;
+	}
+}

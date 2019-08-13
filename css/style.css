@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+body {
+  font-family: "Rubik", sans-serif; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.navbar {
+  flex: 0 0 auto;
+  background-color: #ebebe3; }
+  .navbar .links {
+    list-style: none;
+    padding: 0; }
+    .navbar .links li a {
+      font-family: "Merriweather", serif;
+      display: block;
+      color: #771144;
+      background: transparent;
+      text-decoration: none;
+      padding: 0.2em .5em;
+      font-size: 1.2em;
+      transition: color 1s ease, background 1s ease, padding 1s ease; }
+      .navbar .links li a:hover {
+        color: #ebebe3;
+        padding-left: 3em;
+        background: #771144; }
+
+.banner {
+  flex: 1 0 auto;
+  background: #ebebe3; }
+
+.nav--top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1em 1em 1em; }
+  .nav--top h3 {
+    font-family: "Merriweather", serif;
+    font-size: 2em;
+    padding: 0.2em;
+    color: #771144;
+    border: 0.1em solid #771144;
+    transition: color 2s ease, background 2s ease; }
+    .nav--top h3:hover {
+      color: #4a4a48; }
+
+.toggle {
+  padding: 0.3em;
+  border: 0.1em solid #ebebe3;
+  border-radius: 0.4em;
+  cursor: pointer;
+  align-self: center; }
+  .toggle--bar {
+    height: 0.2em;
+    width: 1.5em;
+    border-radius: 0.2em;
+    background-color: #ebebe3;
+    margin: 0.3em;
+    transition: transform 1s ease; }
+
+.turn .bar--1 {
+  transform: rotate(-45deg) translate(-0.1em, 0.2em); }
+
+.turn .bar--2 {
+  display: none; }
+
+.turn .bar--3 {
+  transform: rotate(45deg) translate(-0.2em, -0.2em); }
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 .5em;
+    font-size: 0.8em; }
+    .navbar ul {
+      flex: 1 auto;
+      display: flex !important;
+      flex-wrap: wrap; }
+      .navbar ul li {
+        flex: 1 0 6em; }
+        .navbar ul li .link--icon {
+          color: tomato;
+          background: yellow; }
+          .navbar ul li .link--icon:hover {
+            background: green; }
+      .navbar ul .icon {
+        flex: 0 0 3em; }
+      .navbar ul a {
+        text-align: center; }
+        .navbar ul a:hover {
+          padding: 1em 0 1em 0; }
+    .navbar .nav--top {
+      padding: .6em; }
+  .toggle {
+    display: none; } }
+
+.banner {
+  background: linear-gradient(rgba(228, 225, 226, 0.74), rgba(138, 1, 65, 0.678)), url(/img/1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .banner--box {
+    color: #ebebe3;
+    text-align: center;
+    font-family: "Merriweather", serif; }
+    .banner--box a {
+      display: inline-block;
+      padding: .8em;
+      border-radius: 2em;
+      font-size: 1.1em;
+      font-family: "Merriweather", serif;
+      text-decoration: none;
+      color: #ebebe3;
+      background: #771144;
+      border: 0.1em solid #ebebe3;
+      transition: background 3s ease, border 0.5s ease; }
+      .banner--box a:hover {
+        background: transparent;
+        border: 0.2em solid #771144; }
+  .banner--title {
+    text-transform: capitalize;
+    font-size: 6em; }
+  .banner--underline {
+    width: 3.2em;
+    margin: 0.2em auto;
+    border: 0.2em solid #771144; }
+  .banner--subtitle {
+    margin: 0.4em 0 0.6em 0;
+    font-size: 1.6em; }
+
+.skills {
+  padding: 3em; }
+  .skills .title {
+    margin: 1.2em 0 2em 0;
+    cursor: pointer; }
+    .skills .title--text {
+      font-size: 2em;
+      text-transform: capitalize;
+      color: #771144; }
+    .skills .title--underline {
+      width: 7em;
+      border: 0.3em solid #771144;
+      transition: width 2s ease; }
+      .skills .title--underline:hover {
+        width: 10em; }
+
+.skill {
+  text-align: center;
+  margin: 2em 0; }
+  .skill .fa {
+    color: #771144;
+    padding: 1em;
+    border-radius: 50%;
+    font-size: 2em;
+    transition: transform 0.5s ease-in, background 0.5s ease, color 0.5s ease; }
+    .skill .fa:hover {
+      transform: scale(0.7);
+      background: #771144;
+      color: #ebebe3; }
+  .skill h3 {
+    margin: 0.6em 0 0.6em 0;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    color: #771144; }
+  .skill p {
+    line-height: 1.2em;
+    width: 55%;
+    margin: 0 auto; }
+
+@media screen and (min-width: 600px) {
+  .skills--center {
+    max-width: 98vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .skill {
+    flex: 0 1 calc(50% - 2em); } }
